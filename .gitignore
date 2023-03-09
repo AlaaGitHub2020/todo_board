@@ -18,7 +18,10 @@ firebase_app_id_file.json
 firebase_options.dart
 *.config.dart
 
-/lib/generated/
+#I removed this folder from gitignore to let pushing the language generated file to git repo ,
+# so if you dont have the " Flutter Intl " on your IDE
+#/lib/generated/
+
 
 #Secrets
 config/
