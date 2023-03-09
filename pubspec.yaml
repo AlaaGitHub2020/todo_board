@@ -5,14 +5,63 @@ version: 1.0.0+1
 
 environment:
   sdk: '>=2.19.2 <3.0.0'
+
+flutter_intl:
+  enabled: true
+
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.5
+  flutter_bloc: ^8.1.2
+  google_fonts: ^4.0.3
+  logger: ^1.2.2
+  auto_route: ^5.0.4
+  injectable: ^2.1.0
+  freezed_annotation: ^2.2.0
+  json_annotation: ^4.8.0
+  kt_dart: ^1.0.0
+  rxdart: ^0.27.7
+  shared_preferences: ^2.0.18
+  firebase_core: ^2.7.1
+  firebase_auth: ^4.2.10
+  cloud_firestore: ^4.4.4
+  firebase_crashlytics: ^3.0.16
+  firebase_analytics: ^10.1.5
+  firebase_messaging: ^14.2.6
+  firebase_performance: ^0.9.0+15
+  firebase_app_check: ^0.1.1+13
+  uuid: ^3.0.7
+  dartz: ^0.10.1
+  flutter_native_splash: ^2.2.19
+  firebase_ui_auth: ^1.1.16
+  firebase_dynamic_links: ^5.0.16
+  package_info_plus: ^3.0.3
+  flutter_hooks: ^0.18.6
+  stop_watch_timer: ^2.0.0
+  to_csv: ^1.1.1
+  rive: ^0.10.2
+  flutter_local_notifications: ^9.2.0
+  http: ^0.13.5
+
+
+  rflutter_alert: ^2.0.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
+  freezed: ^2.3.2
+  injectable_generator: ^2.1.4
+  auto_route_generator: ^5.0.3
+  json_serializable: ^6.6.1
+
 flutter:
   uses-material-design: true
+  generate: true
+
+  assets:
+  - assets/icons/
