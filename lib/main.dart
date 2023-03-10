@@ -53,17 +53,17 @@ Future<void> appConfiguration() async {
           options: DefaultFirebaseOptions.currentPlatform);
       await configureInjection(Environment.prod);
       await setupPackageInfoService();
+      await getIt<FirebaseAppCheck>().activate(
+          webRecaptchaSiteKey: 'myReCAPTCHA_key',
+          androidProvider: (kDebugMode)
+              ? AndroidProvider.debug
+              : AndroidProvider.playIntegrity);
       await getIt<FirebaseMessaging>().getInitialMessage();
       FirebaseMessaging.onBackgroundMessage(
           _firebaseMessagingBackgroundHandler);
       FirebaseUIAuth.configureProviders([EmailAuthProvider()]);
       FlutterError.onError =
-          FirebaseCrashlytics.instance.recordFlutterFatalError;
-      await FirebaseAppCheck.instance.activate(
-        webRecaptchaSiteKey: 'myReCAPTCHA_key',
-        androidProvider: AndroidProvider.debug,
-      );
-
+          getIt<FirebaseCrashlytics>().recordFlutterFatalError;
       await SharedPreferences.getInstance().then(
         (value) async {
           Object? cUserId = value.get(Strings.cUserIdForSharePreferences);

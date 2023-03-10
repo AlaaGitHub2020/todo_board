@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m0(taskName) =>
       "Are you sure you want to delete the task \"${taskName}\" with its timer history?";
 
+  static String m1(taskName) =>
+      "Are you sure you want to delete the task \"${taskName}\" timer history?";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "accountInformation":
@@ -30,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addNewTask": MessageLookupByLibrary.simpleMessage("Add new task"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "areYouSure": m0,
+        "areYouSureDeleteTimerHistory": m1,
         "at": MessageLookupByLibrary.simpleMessage("  at: "),
         "byRegisteringYouAgreeToOurTermsAndConditions":
             MessageLookupByLibrary.simpleMessage(
@@ -47,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "deleteTask": MessageLookupByLibrary.simpleMessage("Delete Task"),
+        "deleteTaskTimerHistory":
+            MessageLookupByLibrary.simpleMessage("Delete Task Timer History"),
         "description": MessageLookupByLibrary.simpleMessage("Description: "),
         "editTask": MessageLookupByLibrary.simpleMessage("Edit the task"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -67,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noCompletedTasksYet":
             MessageLookupByLibrary.simpleMessage("No completed tasks yet"),
         "noTasksYet": MessageLookupByLibrary.simpleMessage("No tasks yet"),
+        "oopsErrorHappened": MessageLookupByLibrary.simpleMessage(
+            "oops Error Happened , Please try again later!!"),
         "passwordMinimumLength": MessageLookupByLibrary.simpleMessage(
             "A password must have a minimum length of 8."),
         "passwordsNotMatched":

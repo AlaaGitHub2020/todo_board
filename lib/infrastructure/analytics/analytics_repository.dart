@@ -366,4 +366,19 @@ class AnalyticsRepository implements IAnalyticsRepository {
       return left(const AnalyticsFailure.serverError());
     }
   }
+
+  @override
+  Future<Either<AnalyticsFailure, Unit>> logDeleteTaskHistory(
+      {String? taskId}) async {
+    try {
+      await _analytics.logEvent(
+        name: Strings.cDeleteTaskHistory,
+        parameters: {Strings.cTaskID: taskId},
+      );
+      return right(unit);
+    } catch (e) {
+      log.e("ERROR :$e");
+      return left(const AnalyticsFailure.serverError());
+    }
+  }
 }

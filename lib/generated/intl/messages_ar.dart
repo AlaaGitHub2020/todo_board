@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m0(taskName) =>
       "هل أنت متأكد من أنك تريد حذف المهمة \"${taskName}\"وتواريخ المؤقتات الخاصة بها؟";
 
+  static String m1(taskName) =>
+      "هل أنت متأكد من أنك تريد حذف تواريخ المؤقتات الخاصة بالمهمة \"${taskName}\"؟";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "accountInformation":
@@ -30,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addNewTask": MessageLookupByLibrary.simpleMessage("أضف مهمة جديدة"),
         "arabic": MessageLookupByLibrary.simpleMessage("عربي"),
         "areYouSure": m0,
+        "areYouSureDeleteTimerHistory": m1,
         "at": MessageLookupByLibrary.simpleMessage("  في:  "),
         "byRegisteringYouAgreeToOurTermsAndConditions":
             MessageLookupByLibrary.simpleMessage(
@@ -48,6 +52,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "deleteTask": MessageLookupByLibrary.simpleMessage("حذف المهمة"),
+        "deleteTaskTimerHistory":
+            MessageLookupByLibrary.simpleMessage("حذف تواريخ المؤقتات"),
         "description": MessageLookupByLibrary.simpleMessage("وصف: "),
         "editTask": MessageLookupByLibrary.simpleMessage("تحرير المهمة"),
         "email": MessageLookupByLibrary.simpleMessage("بريد إلكتروني"),
@@ -69,6 +75,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "لا توجد مهام مكتملة حتى الآن"),
         "noTasksYet":
             MessageLookupByLibrary.simpleMessage("لا توجد مهام حتى الآن"),
+        "oopsErrorHappened": MessageLookupByLibrary.simpleMessage(
+            "للاسف حدث خطأ الرجاء المحاولة لاحقا !!"),
         "passwordMinimumLength": MessageLookupByLibrary.simpleMessage(
             "يجب ألا يقل طول كلمة المرور عن 8."),
         "passwordsNotMatched":

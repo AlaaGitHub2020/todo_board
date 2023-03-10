@@ -62,4 +62,6 @@ abstract class IAnalyticsRepository {
       logSendNotificationToSpecificUserDeviceUsingFCMToken();
 
   Future<Either<AnalyticsFailure, Unit>> logSendPushMessage();
+
+  Future<Either<AnalyticsFailure, Unit>> logDeleteTaskHistory({String? taskId});
 }

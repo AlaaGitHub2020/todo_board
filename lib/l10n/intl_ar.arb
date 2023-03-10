@@ -61,5 +61,8 @@
   "userName": "اسم المستخدم",
   "email": "بريد إلكتروني",
   "accountInformation": "معلومات الحساب",
-  "user": "مستخدم"
+  "user": "مستخدم",
+  "deleteTaskTimerHistory": "حذف تواريخ المؤقتات",
+  "areYouSureDeleteTimerHistory": "هل أنت متأكد من أنك تريد حذف تواريخ المؤقتات الخاصة بالمهمة \"{taskName}\"؟",
+  "oopsErrorHappened": "للاسف حدث خطأ الرجاء المحاولة لاحقا !!"
 }

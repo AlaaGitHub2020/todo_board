@@ -669,6 +669,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Delete Task Timer History`
+  String get deleteTaskTimerHistory {
+    return Intl.message(
+      'Delete Task Timer History',
+      name: 'deleteTaskTimerHistory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete the task "{taskName}" timer history?`
+  String areYouSureDeleteTimerHistory(Object taskName) {
+    return Intl.message(
+      'Are you sure you want to delete the task "$taskName" timer history?',
+      name: 'areYouSureDeleteTimerHistory',
+      desc: '',
+      args: [taskName],
+    );
+  }
+
+  /// `oops Error Happened , Please try again later!!`
+  String get oopsErrorHappened {
+    return Intl.message(
+      'oops Error Happened , Please try again later!!',
+      name: 'oopsErrorHappened',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
