@@ -14,4 +14,6 @@ abstract class ITaskTimerRepository {
 
   Future<Either<TaskTimerFailure, Unit>> createNewUserTaskTimerHistory(
       String taskId, TimerHistory timerHistory);
+
+  Future<Either<TaskTimerFailure, Unit>> deleteTaskTimerHistory(String taskId);
 }

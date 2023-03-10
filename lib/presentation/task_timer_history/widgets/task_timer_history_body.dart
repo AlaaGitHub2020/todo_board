@@ -35,7 +35,7 @@ class TaskTimerHistoryBody extends StatelessWidget {
                 buildSizedBox(),
                 buildTaskNameText(context),
                 buildSizedBox(),
-                const TaskTimerHistoryList(),
+                TaskTimerHistoryList(taskItem: taskItem),
               ],
             ),
           ),

@@ -42,6 +42,7 @@ class Strings {
   static const String cErrorDescription = "Error_Description";
   static const String cDeleteUser = "Delete_User";
   static const String cDeleteUserTask = "Delete_User_task";
+  static const String cDeleteTaskHistory = "Delete_Task_History";
   static const String cCreateUser = "Create_User";
   static const String cCreateNewUserTask = "Create_New_User_task";
   static const String cGetFCMToken = "Get_FCM_Token";

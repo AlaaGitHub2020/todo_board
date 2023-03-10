@@ -54,6 +54,7 @@ class TaskItemRepository implements ITaskItemRepository {
       log.i("deleteUserTask Started");
       final userDoc = await _firebaseFireStore.userDocument();
       final taskId = taskItem.id.getOrCrash();
+      await userDoc.deleteTaskTimerHistoryCollection(taskId!);
       await userDoc.taskCollection.doc(taskId).delete();
       await _analytics.logDeleteUserTask(taskId: taskId);
       return right(unit);

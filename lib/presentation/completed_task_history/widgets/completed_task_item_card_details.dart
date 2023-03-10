@@ -57,7 +57,7 @@ class CompletedTaskItemCardDetails extends StatelessWidget {
                       taskItem.taskDateCompleted?.getOrCrash()?.split('.')[0] ??
                           '',
                   textStyleLabelSmall: true),
-              const TaskTimerHistoryList(),
+              TaskTimerHistoryList(taskItem: taskItem),
             ],
           ),
         ),

@@ -22,6 +22,8 @@ firebase_options.dart
 # so if you dont have the " Flutter Intl " on your IDE
 #/lib/generated/
 
+.firebase
+
 
 #Secrets
 config/

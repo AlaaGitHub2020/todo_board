@@ -123,4 +123,24 @@ class TaskTimerRepository implements ITaskTimerRepository {
       }
     }
   }
+
+  @override
+  Future<Either<TaskTimerFailure, Unit>> deleteTaskTimerHistory(
+      String taskId) async {
+    try {
+      log.i("createNewUserTaskTimerHistory Started");
+      final userDoc = await _firebaseFireStore.userDocument();
+      await userDoc.deleteTaskTimerHistoryCollection(taskId);
+      await _analytics.logDeleteTaskHistory(taskId: taskId);
+      return right(unit);
+    } on PlatformException catch (error) {
+      log.e("ERROR :$error");
+      await _analytics.logErrorHappened(errorDescription: error.toString());
+      if (error.message!.contains("permission-denied")) {
+        return left(const TaskTimerFailure.insufficientPermission());
+      } else {
+        return left(const TaskTimerFailure.unexpected());
+      }
+    }
+  }
 }

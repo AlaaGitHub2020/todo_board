@@ -14,4 +14,7 @@ class TaskActorEvent with _$TaskActorEvent {
 
   const factory TaskActorEvent.timerHistoryChanged(
       TimerHistory? newTimerHistory, TaskItem taskItem) = _TimerHistoryChanged;
+
+  const factory TaskActorEvent.deleteTimerHistoryPressed(TaskItem taskItem) =
+      _DeleteTimerHistoryPressed;
 }

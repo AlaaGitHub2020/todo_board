@@ -61,5 +61,8 @@
   "userName": "User Name",
   "email": "Email",
   "accountInformation": "Account Information",
-  "user": "User"
+  "user": "User",
+  "deleteTaskTimerHistory": "Delete Task Timer History",
+  "areYouSureDeleteTimerHistory": "Are you sure you want to delete the task \"{taskName}\" timer history?",
+  "oopsErrorHappened": "oops Error Happened , Please try again later!!"
 }

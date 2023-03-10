@@ -31,4 +31,12 @@ extension DocumentReferenceX on DocumentReference {
 
   CollectionReference taskTimerHistoryCollection(String tasksId) =>
       taskCollection.doc(tasksId).collection(Strings.fDBTimerHistory);
+
+  deleteTaskTimerHistoryCollection(String taskId) async {
+    await taskTimerHistoryCollection(taskId).get().then((snapshot) {
+      for (DocumentSnapshot document in snapshot.docs) {
+        document.reference.delete();
+      }
+    });
+  }
 }

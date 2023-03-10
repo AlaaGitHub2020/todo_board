@@ -93,6 +93,18 @@ class TaskActorBloc extends Bloc<TaskActorEvent, TaskActorState> {
               ),
             );
           },
+          deleteTimerHistoryPressed: (e) async {
+            log.i("deleteTimerHistoryPressed started");
+            emit(const TaskActorState.actionInProgress());
+            final possibleFailure = await _taskTimerRepository
+                .deleteTaskTimerHistory(e.taskItem.id.getOrCrash()!);
+            emit(
+              possibleFailure.fold(
+                (failure) => TaskActorState.changedTimerHistoryFailure(failure),
+                (_) => const TaskActorState.changedTimerHistorySuccess(),
+              ),
+            );
+          },
         );
       },
     );
