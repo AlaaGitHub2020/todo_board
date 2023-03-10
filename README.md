@@ -6,11 +6,27 @@ A new Flutter project.
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+To build the project on your machine do the next steps in your project terminal :
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1- Clone the code from git repository 
+2- In the project termenal  run :
+ - flutter clean
+- flutter pub get
+ - flutter packages pub run build_runner build --delete-conflicting-outputs
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3- Configure your firebase project and link with the repository code:
+- npm install -g firebase-tools
+- dart pub global activate flutterfire_cli
+- flutterfire configure
+
+ 4- After connecting with your firebase project you need to :
+- enailbe the "Authentication" enable the (Sign-in providers : Email/Password ) 
+- enable App Check and register your apps 
+- enable Cloud Firestore 
+- enable Crashlytics
+- enable analytics
+- enable Performance
+- enable Messaging
+- enable Dynamic Links 
+
+then you can run the project on your machine.
