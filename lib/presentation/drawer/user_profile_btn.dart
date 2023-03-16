@@ -21,7 +21,7 @@ class UserProfileBtn extends StatelessWidget {
       child: Row(
         children: [
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.only(top: 20,bottom: 20,left: 10,right: 10),
             child: Text(
               S.of(context).userProfile,
               style: Theme.of(context).textTheme.titleMedium,

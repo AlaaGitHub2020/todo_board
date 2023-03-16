@@ -12,6 +12,7 @@ import 'package:todo_board/application/core/theme/theme_cubit.dart';
 import 'package:todo_board/domain/analytics/i_analytics_repository.dart';
 import 'package:todo_board/domain/core/utilities/colors.dart';
 import 'package:todo_board/domain/core/utilities/strings.dart';
+import 'package:todo_board/domain/messaging/i_messaging_repository.dart';
 import 'package:todo_board/generated/l10n.dart';
 import 'package:todo_board/injection.dart';
 import 'package:todo_board/presentation/routes/router.gr.dart';
@@ -109,6 +110,9 @@ class _ToDoBoardState extends State<ToDoBoard> {
   @override
   void initState() {
     checkApplicationSettings();
+    getIt<IMessagingRepository>().requestPermissions();
+    getIt<IMessagingRepository>().getFCMToken();
+    getIt<IMessagingRepository>().initInformationDetails();
     super.initState();
   }
 

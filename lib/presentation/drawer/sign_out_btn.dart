@@ -23,7 +23,7 @@ class SignOutBtn extends StatelessWidget {
       borderRadius: const BorderRadius.all(Radius.circular(20)),
       onTap: () => onTapSignOutBtn(context),
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.only(top: 20,bottom: 20,left: 10,right: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
