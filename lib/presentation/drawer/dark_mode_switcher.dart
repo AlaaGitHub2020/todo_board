@@ -28,14 +28,10 @@ class _DarkModeSwitcherState extends State<DarkModeSwitcher> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
-      margin: EdgeInsets.only(
-          right: MediaQuery.of(context).size.width * 0.01,
-          left: MediaQuery.of(context).size.width * 0.01),
-
       child: ListTile(
-        contentPadding: EdgeInsets.zero,
+        contentPadding: const EdgeInsets.only(left: 10),
         leading: buildDarkModeImage(),
         title: buildDarkModeText(context),
         trailing: buildDarkModeSwitcher(),

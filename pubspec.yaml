@@ -46,9 +46,6 @@ dependencies:
   flutter_local_notifications: ^9.2.0
   http: ^0.13.5
 
-
-  rflutter_alert: ^2.0.4
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
