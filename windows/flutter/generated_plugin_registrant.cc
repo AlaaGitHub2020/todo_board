@@ -8,6 +8,7 @@
 
 #include <desktop_webview_auth/desktop_webview_auth_plugin.h>
 #include <file_saver/file_saver_plugin.h>
+#include <firebase_core/firebase_core_plugin_c_api.h>
 #include <rive_common/rive_plugin.h>
 
 void RegisterPlugins(flutter::PluginRegistry* registry) {
@@ -15,6 +16,8 @@ void RegisterPlugins(flutter::PluginRegistry* registry) {
       registry->GetRegistrarForPlugin("DesktopWebviewAuthPlugin"));
   FileSaverPluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("FileSaverPlugin"));
+  FirebaseCorePluginCApiRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("FirebaseCorePluginCApi"));
   RivePluginRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("RivePlugin"));
 }

@@ -5,6 +5,7 @@
 list(APPEND FLUTTER_PLUGIN_LIST
   desktop_webview_auth
   file_saver
+  firebase_core
   rive_common
 )
 
